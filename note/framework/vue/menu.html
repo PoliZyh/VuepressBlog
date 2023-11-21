@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Menu组件的封装 | Ethan_Zhang</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    
+    <meta name="description" content="EthanZhang的博客">
+    
+    <link rel="preload" href="/VuepressBlog/assets/css/0.styles.36acf85b.css" as="style"><link rel="preload" href="/VuepressBlog/assets/js/app.7c089186.js" as="script"><link rel="preload" href="/VuepressBlog/assets/js/2.e8a88f4c.js" as="script"><link rel="preload" href="/VuepressBlog/assets/js/1.6bc621c5.js" as="script"><link rel="preload" href="/VuepressBlog/assets/js/34.c07a71a1.js" as="script"><link rel="prefetch" href="/VuepressBlog/assets/js/10.0f6074f5.js"><link rel="prefetch" href="/VuepressBlog/assets/js/11.747fcaf5.js"><link rel="prefetch" href="/VuepressBlog/assets/js/12.519ee08e.js"><link rel="prefetch" href="/VuepressBlog/assets/js/13.cf486763.js"><link rel="prefetch" href="/VuepressBlog/assets/js/14.633d8b69.js"><link rel="prefetch" href="/VuepressBlog/assets/js/15.0b2f49ec.js"><link rel="prefetch" href="/VuepressBlog/assets/js/16.fee59a07.js"><link rel="prefetch" href="/VuepressBlog/assets/js/17.2eba3d15.js"><link rel="prefetch" href="/VuepressBlog/assets/js/18.e1541ccc.js"><link rel="prefetch" href="/VuepressBlog/assets/js/19.4f3145ab.js"><link rel="prefetch" href="/VuepressBlog/assets/js/20.4b4a7f9d.js"><link rel="prefetch" href="/VuepressBlog/assets/js/21.8ee70ab5.js"><link rel="prefetch" href="/VuepressBlog/assets/js/22.94294803.js"><link rel="prefetch" href="/VuepressBlog/assets/js/23.e6adf6f4.js"><link rel="prefetch" href="/VuepressBlog/assets/js/24.0b37918a.js"><link rel="prefetch" href="/VuepressBlog/assets/js/25.e7bcddb8.js"><link rel="prefetch" href="/VuepressBlog/assets/js/26.ba22da63.js"><link rel="prefetch" href="/VuepressBlog/assets/js/27.ce670089.js"><link rel="prefetch" href="/VuepressBlog/assets/js/28.0ce16348.js"><link rel="prefetch" href="/VuepressBlog/assets/js/29.fff60880.js"><link rel="prefetch" href="/VuepressBlog/assets/js/3.ce2fe7f0.js"><link rel="prefetch" href="/VuepressBlog/assets/js/30.94331cec.js"><link rel="prefetch" href="/VuepressBlog/assets/js/31.b9c56feb.js"><link rel="prefetch" href="/VuepressBlog/assets/js/32.50de7540.js"><link rel="prefetch" href="/VuepressBlog/assets/js/33.f389ef1e.js"><link rel="prefetch" href="/VuepressBlog/assets/js/35.73e0e708.js"><link rel="prefetch" href="/VuepressBlog/assets/js/36.4d5cec87.js"><link rel="prefetch" href="/VuepressBlog/assets/js/37.8062692d.js"><link rel="prefetch" href="/VuepressBlog/assets/js/38.c0c3b579.js"><link rel="prefetch" href="/VuepressBlog/assets/js/39.a9be6e67.js"><link rel="prefetch" href="/VuepressBlog/assets/js/4.62ac00ff.js"><link rel="prefetch" href="/VuepressBlog/assets/js/40.0c541420.js"><link rel="prefetch" href="/VuepressBlog/assets/js/41.265730b2.js"><link rel="prefetch" href="/VuepressBlog/assets/js/42.a08059b3.js"><link rel="prefetch" href="/VuepressBlog/assets/js/43.77b99228.js"><link rel="prefetch" href="/VuepressBlog/assets/js/44.57a1ccd9.js"><link rel="prefetch" href="/VuepressBlog/assets/js/45.1ddd9b90.js"><link rel="prefetch" href="/VuepressBlog/assets/js/5.762befa8.js"><link rel="prefetch" href="/VuepressBlog/assets/js/6.29c993ed.js"><link rel="prefetch" href="/VuepressBlog/assets/js/7.415e8f42.js"><link rel="prefetch" href="/VuepressBlog/assets/js/vendors~docsearch.c0b6abca.js">
+    <link rel="stylesheet" href="/VuepressBlog/assets/css/0.styles.36acf85b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/VuepressBlog/" class="home-link router-link-active"><!----> <span class="site-name">Ethan_Zhang</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/VuepressBlog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术栈" class="dropdown-title"><span class="title">技术栈</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术栈" class="mobile-dropdown-title"><span class="title">技术栈</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/VuepressBlog/note/framework/vue/" class="nav-link router-link-active">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/VuepressBlog/note/framework/react/" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/VuepressBlog/note/framework/nodejs/" class="nav-link">
+  Node.js
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="语言" class="dropdown-title"><span class="title">语言</span> <span class="arrow down"></span></button> <button type="button" aria-label="语言" class="mobile-dropdown-title"><span class="title">语言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/VuepressBlog/note/lang/js/" class="nav-link">
+  Js
+</a></li><li class="dropdown-item"><!----> <a href="/VuepressBlog/note/lang/ts/" class="nav-link">
+  Ts
+</a></li><li class="dropdown-item"><!----> <a href="/VuepressBlog/note/lang/css/" class="nav-link">
+  Css
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="项目" class="dropdown-title"><span class="title">项目</span> <span class="arrow down"></span></button> <button type="button" aria-label="项目" class="mobile-dropdown-title"><span class="title">项目</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/VuepressBlog/note/project/low-code/" class="nav-link">
+  低代码编辑器
+</a></li></ul></div></div><div class="nav-item"><a href="/VuepressBlog/note/plugin/" class="nav-link">
+  插件
+</a></div><div class="nav-item"><a href="/VuepressBlog/note/other/" class="nav-link">
+  其他
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="博客" class="dropdown-title"><span class="title">博客</span> <span class="arrow down"></span></button> <button type="button" aria-label="博客" class="mobile-dropdown-title"><span class="title">博客</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/PoliZyh" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://blog.csdn.net/qq_62875177" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  CSDN
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/VuepressBlog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术栈" class="dropdown-title"><span class="title">技术栈</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术栈" class="mobile-dropdown-title"><span class="title">技术栈</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/VuepressBlog/note/framework/vue/" class="nav-link router-link-active">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/VuepressBlog/note/framework/react/" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/VuepressBlog/note/framework/nodejs/" class="nav-link">
+  Node.js
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="语言" class="dropdown-title"><span class="title">语言</span> <span class="arrow down"></span></button> <button type="button" aria-label="语言" class="mobile-dropdown-title"><span class="title">语言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/VuepressBlog/note/lang/js/" class="nav-link">
+  Js
+</a></li><li class="dropdown-item"><!----> <a href="/VuepressBlog/note/lang/ts/" class="nav-link">
+  Ts
+</a></li><li class="dropdown-item"><!----> <a href="/VuepressBlog/note/lang/css/" class="nav-link">
+  Css
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="项目" class="dropdown-title"><span class="title">项目</span> <span class="arrow down"></span></button> <button type="button" aria-label="项目" class="mobile-dropdown-title"><span class="title">项目</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/VuepressBlog/note/project/low-code/" class="nav-link">
+  低代码编辑器
+</a></li></ul></div></div><div class="nav-item"><a href="/VuepressBlog/note/plugin/" class="nav-link">
+  插件
+</a></div><div class="nav-item"><a href="/VuepressBlog/note/other/" class="nav-link">
+  其他
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="博客" class="dropdown-title"><span class="title">博客</span> <span class="arrow down"></span></button> <button type="button" aria-label="博客" class="mobile-dropdown-title"><span class="title">博客</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/PoliZyh" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://blog.csdn.net/qq_62875177" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  CSDN
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>关于</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/VuepressBlog/note/framework/vue/" aria-current="page" class="sidebar-link">介绍</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>业务</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/VuepressBlog/note/framework/vue/menu.html" aria-current="page" class="active sidebar-link">递归Menu组件</a></li><li><a href="/VuepressBlog/note/framework/vue/axios.html" class="sidebar-link">Axios</a></li><li><a href="/VuepressBlog/note/framework/vue/token.html" class="sidebar-link">无感刷新Token</a></li><li><a href="/VuepressBlog/note/framework/vue/svg.html" class="sidebar-link">封装Svg组件</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>知识点</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/VuepressBlog/note/framework/vue/router.html" class="sidebar-link">路由进阶</a></li><li><a href="/VuepressBlog/note/framework/vue/asyncComponent.html" class="sidebar-link">异步组件</a></li><li><a href="/VuepressBlog/note/framework/vue/tv-show.html" class="sidebar-link">在template中v-show</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>API</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/VuepressBlog/note/framework/vue/defineExpose.html" class="sidebar-link">defineExpose</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="menu组件的封装"><a href="#menu组件的封装" class="header-anchor">#</a> Menu组件的封装</h1> <h2 id="递归组件"><a href="#递归组件" class="header-anchor">#</a> 递归组件</h2> <p>在Vue中，可以使用在某一组件中调用自身实现递归组件。</p> <p>需要注意的是，递归组件需要导出一个name，若使用了setup语法糖，我们还需要再添加一个script标签用于导出name。</p> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>ts<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token comment">// 所有script标签的lang需相同</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'Menu'</span><span class="token punctuation">,</span> <span class="token comment">// 递归组件必须有name</span>
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h2 id="递归的关键点"><a href="#递归的关键点" class="header-anchor">#</a> 递归的关键点</h2> <p>在拿到数据后需要遍历，通过if判断是否有子数据，若有需要调用自身组件进行递归</p> <h2 id="代码"><a href="#代码" class="header-anchor">#</a> 代码</h2> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token comment">&lt;!-- Menu.vue --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token comment">&lt;!-- 不能用div包裹否则会产生无用div --&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span> <span class="token attr-name">v-for</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item in menuList<span class="token punctuation">&quot;</span></span> <span class="token attr-name">:key</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item.path<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!-- 没有自路由 --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span> <span class="token attr-name">v-if</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>!item.children<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-menu-item</span>
+        <span class="token attr-name">v-if</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>!item.meta!.hidden<span class="token punctuation">&quot;</span></span>
+        <span class="token attr-name">:index</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item.path<span class="token punctuation">&quot;</span></span>
+        <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>handleGoRoute<span class="token punctuation">&quot;</span></span>
+      <span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-icon</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>component</span> <span class="token attr-name">:is</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item.meta!.icon<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>component</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-icon</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span> <span class="token attr-name">#title</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">&gt;</span></span>{{ item.meta!.title }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-menu-item</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!-- 有自路由且只有一个子路由 --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span> <span class="token attr-name">v-if</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item.children &amp;&amp; item.children.length === 1<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-menu-item</span>
+        <span class="token attr-name">v-if</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>!item.children[0].meta!.hidden<span class="token punctuation">&quot;</span></span>
+        <span class="token attr-name">:index</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item.children[0].path<span class="token punctuation">&quot;</span></span>
+        <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>handleGoRoute<span class="token punctuation">&quot;</span></span>
+      <span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-icon</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>component</span> <span class="token attr-name">:is</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item.children[0].meta!.icon<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>component</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-icon</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span> <span class="token attr-name">#title</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">&gt;</span></span>{{ item.children[0].meta!.title }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-menu-item</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!-- 有自路由且子路由大于一个 --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-sub-menu</span>
+      <span class="token attr-name">v-if</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item.children &amp;&amp; item.children.length &gt; 1<span class="token punctuation">&quot;</span></span>
+      <span class="token attr-name">:index</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item.path<span class="token punctuation">&quot;</span></span>
+    <span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span> <span class="token attr-name">#title</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-icon</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>component</span> <span class="token attr-name">:is</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item.meta!.icon<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>component</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-icon</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">&gt;</span></span>{{ item.meta!.title }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Menu</span> <span class="token attr-name">:menuList</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item.children<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Menu</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-sub-menu</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">setup</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>ts<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">import</span> type <span class="token punctuation">{</span> RouteRecordRaw <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue-router'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> useRouter <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue-router'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> MenuItemRegistered <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'element-plus'</span>
+<span class="token keyword">const</span> router <span class="token operator">=</span> <span class="token function">useRouter</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+defineProps<span class="token operator">&lt;</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">menuList</span><span class="token operator">:</span> RouteRecordRaw<span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">handleGoRoute</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">vc</span><span class="token operator">:</span> MenuItemRegistered</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  router<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>vc<span class="token punctuation">.</span>index<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>ts<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'Menu'</span><span class="token punctuation">,</span> <span class="token comment">// 递归组件必须有name</span>
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>sccss<span class="token punctuation">&quot;</span></span> <span class="token attr-name">scoped</span><span class="token punctuation">&gt;</span></span><span class="token style"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+
+</code></pre></div><p>传入Menu组件的数据结构</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> RouteRecordRaw <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue-router'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> constantRoutes<span class="token operator">:</span> RouteRecordRaw<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    path<span class="token operator">:</span> <span class="token string">'/login'</span><span class="token punctuation">,</span>
+    name<span class="token operator">:</span> <span class="token string">'Login'</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">component</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">'@/views/Login/index.vue'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    meta<span class="token operator">:</span> <span class="token punctuation">{</span>
+      title<span class="token operator">:</span> <span class="token string">'登录'</span><span class="token punctuation">,</span>
+      hidden<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">// 路由标题是否隐藏</span>
+      icon<span class="token operator">:</span> <span class="token string">'Promotion'</span><span class="token punctuation">,</span> <span class="token comment">// 菜单左侧图标</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    path<span class="token operator">:</span> <span class="token string">'/'</span><span class="token punctuation">,</span>
+    name<span class="token operator">:</span> <span class="token string">'Layout'</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">component</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">'@/layout/index.vue'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    meta<span class="token operator">:</span> <span class="token punctuation">{</span>
+      hidden<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+      title<span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+      icon<span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    redirect<span class="token operator">:</span> <span class="token string">'/home'</span><span class="token punctuation">,</span>
+    children<span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        path<span class="token operator">:</span> <span class="token string">'/home'</span><span class="token punctuation">,</span>
+        <span class="token function-variable function">component</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">'@/views/Home/index.vue'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        name<span class="token operator">:</span> <span class="token string">'Home'</span><span class="token punctuation">,</span>
+        meta<span class="token operator">:</span> <span class="token punctuation">{</span>
+          title<span class="token operator">:</span> <span class="token string">'首页'</span><span class="token punctuation">,</span>
+          hidden<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+          icon<span class="token operator">:</span> <span class="token string">'HomeFilled'</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    path<span class="token operator">:</span> <span class="token string">'/screen'</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">component</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">'@/views/screen/index.vue'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    name<span class="token operator">:</span> <span class="token string">'Screen'</span><span class="token punctuation">,</span>
+    meta<span class="token operator">:</span> <span class="token punctuation">{</span>
+      title<span class="token operator">:</span> <span class="token string">'数据大屏'</span><span class="token punctuation">,</span>
+      hidden<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+      icon<span class="token operator">:</span> <span class="token string">'Platform'</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    path<span class="token operator">:</span> <span class="token string">'/acl'</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">component</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">'@/layout/index.vue'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    name<span class="token operator">:</span> <span class="token string">'Acl'</span><span class="token punctuation">,</span>
+    meta<span class="token operator">:</span> <span class="token punctuation">{</span>
+      title<span class="token operator">:</span> <span class="token string">'权限管理'</span><span class="token punctuation">,</span>
+      hidden<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+      icon<span class="token operator">:</span> <span class="token string">'Lock'</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    redirect<span class="token operator">:</span> <span class="token string">'/acl/user'</span><span class="token punctuation">,</span>
+    children<span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        path<span class="token operator">:</span> <span class="token string">'/acl/user'</span><span class="token punctuation">,</span>
+        <span class="token function-variable function">component</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">'@/views/Acl/User/index.vue'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        name<span class="token operator">:</span> <span class="token string">'Acl'</span><span class="token punctuation">,</span>
+        meta<span class="token operator">:</span> <span class="token punctuation">{</span>
+          title<span class="token operator">:</span> <span class="token string">'用户管理'</span><span class="token punctuation">,</span>
+          hidden<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+          icon<span class="token operator">:</span> <span class="token string">'User'</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        path<span class="token operator">:</span> <span class="token string">'/acl/role'</span><span class="token punctuation">,</span>
+        <span class="token function-variable function">component</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">'@/views/Acl/Role/index.vue'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        name<span class="token operator">:</span> <span class="token string">'Role'</span><span class="token punctuation">,</span>
+        meta<span class="token operator">:</span> <span class="token punctuation">{</span>
+          title<span class="token operator">:</span> <span class="token string">'角色管理'</span><span class="token punctuation">,</span>
+          hidden<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+          icon<span class="token operator">:</span> <span class="token string">'UserFilled'</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        path<span class="token operator">:</span> <span class="token string">'/acl/permission'</span><span class="token punctuation">,</span>
+        <span class="token function-variable function">component</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">'@/views/Acl/Permission/index.vue'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        name<span class="token operator">:</span> <span class="token string">'Permission'</span><span class="token punctuation">,</span>
+        meta<span class="token operator">:</span> <span class="token punctuation">{</span>
+          title<span class="token operator">:</span> <span class="token string">'菜单管理'</span><span class="token punctuation">,</span>
+          hidden<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+          icon<span class="token operator">:</span> <span class="token string">'Grid'</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    path<span class="token operator">:</span> <span class="token string">'/product'</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">component</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">'@/layout/index.vue'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    name<span class="token operator">:</span> <span class="token string">'Product'</span><span class="token punctuation">,</span>
+    meta<span class="token operator">:</span> <span class="token punctuation">{</span>
+      title<span class="token operator">:</span> <span class="token string">'商品管理'</span><span class="token punctuation">,</span>
+      icon<span class="token operator">:</span> <span class="token string">'Goods'</span><span class="token punctuation">,</span>
+      hidden<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    redirect<span class="token operator">:</span> <span class="token string">'/product/trademark'</span><span class="token punctuation">,</span>
+    children<span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        path<span class="token operator">:</span> <span class="token string">'/product/trademark'</span><span class="token punctuation">,</span>
+        <span class="token function-variable function">component</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">'@/views/Product/Trademark/index.vue'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        name<span class="token operator">:</span> <span class="token string">'Trademark'</span><span class="token punctuation">,</span>
+        meta<span class="token operator">:</span> <span class="token punctuation">{</span>
+          title<span class="token operator">:</span> <span class="token string">'品牌管理'</span><span class="token punctuation">,</span>
+          icon<span class="token operator">:</span> <span class="token string">'ShoppingCart'</span><span class="token punctuation">,</span>
+          hidden<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        path<span class="token operator">:</span> <span class="token string">'/product/attr'</span><span class="token punctuation">,</span>
+        <span class="token function-variable function">component</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">'@/views/Product/Attr/index.vue'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        name<span class="token operator">:</span> <span class="token string">'Attr'</span><span class="token punctuation">,</span>
+        meta<span class="token operator">:</span> <span class="token punctuation">{</span>
+          title<span class="token operator">:</span> <span class="token string">'属性管理'</span><span class="token punctuation">,</span>
+          icon<span class="token operator">:</span> <span class="token string">'ChromeFilled'</span><span class="token punctuation">,</span>
+          hidden<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        path<span class="token operator">:</span> <span class="token string">'/product/spu'</span><span class="token punctuation">,</span>
+        <span class="token function-variable function">component</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">'@/views/Product/Spu/index.vue'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        name<span class="token operator">:</span> <span class="token string">'Spu'</span><span class="token punctuation">,</span>
+        meta<span class="token operator">:</span> <span class="token punctuation">{</span>
+          title<span class="token operator">:</span> <span class="token string">'Spu管理'</span><span class="token punctuation">,</span>
+          icon<span class="token operator">:</span> <span class="token string">'Management'</span><span class="token punctuation">,</span>
+          hidden<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        path<span class="token operator">:</span> <span class="token string">'/product/sku'</span><span class="token punctuation">,</span>
+        <span class="token function-variable function">component</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">'@/views/Product/Sku/index.vue'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        name<span class="token operator">:</span> <span class="token string">'Sku'</span><span class="token punctuation">,</span>
+        meta<span class="token operator">:</span> <span class="token punctuation">{</span>
+          title<span class="token operator">:</span> <span class="token string">'Sku管理'</span><span class="token punctuation">,</span>
+          icon<span class="token operator">:</span> <span class="token string">'Orange'</span><span class="token punctuation">,</span>
+          hidden<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    path<span class="token operator">:</span> <span class="token string">'/404'</span><span class="token punctuation">,</span>
+    name<span class="token operator">:</span> <span class="token string">'404'</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">component</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">'@/views/404/index.vue'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    meta<span class="token operator">:</span> <span class="token punctuation">{</span>
+      title<span class="token operator">:</span> <span class="token string">'404'</span><span class="token punctuation">,</span>
+      hidden<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      icon<span class="token operator">:</span> <span class="token string">'CloseBold'</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    <span class="token comment">// 任意路由</span>
+    path<span class="token operator">:</span> <span class="token string">'/:pathMatch(.*)*'</span><span class="token punctuation">,</span>
+    redirect<span class="token operator">:</span> <span class="token string">'/404'</span><span class="token punctuation">,</span>
+    name<span class="token operator">:</span> <span class="token string">'Any'</span><span class="token punctuation">,</span>
+    meta<span class="token operator">:</span> <span class="token punctuation">{</span>
+      title<span class="token operator">:</span> <span class="token string">'任意路由'</span><span class="token punctuation">,</span>
+      hidden<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      icon<span class="token operator">:</span> <span class="token string">'Warning'</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span>
+
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/VuepressBlog/note/framework/vue/" class="prev router-link-active">
+        介绍
+      </a></span> <span class="next"><a href="/VuepressBlog/note/framework/vue/axios.html">
+        Axios
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/VuepressBlog/assets/js/app.7c089186.js" defer></script><script src="/VuepressBlog/assets/js/2.e8a88f4c.js" defer></script><script src="/VuepressBlog/assets/js/1.6bc621c5.js" defer></script><script src="/VuepressBlog/assets/js/34.c07a71a1.js" defer></script>
+  </body>
+</html>

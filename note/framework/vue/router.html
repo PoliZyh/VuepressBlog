@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>路由进阶 | Ethan_Zhang</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    
+    <meta name="description" content="EthanZhang的博客">
+    
+    <link rel="preload" href="/VuepressBlog/assets/css/0.styles.36acf85b.css" as="style"><link rel="preload" href="/VuepressBlog/assets/js/app.7c089186.js" as="script"><link rel="preload" href="/VuepressBlog/assets/js/2.e8a88f4c.js" as="script"><link rel="preload" href="/VuepressBlog/assets/js/1.6bc621c5.js" as="script"><link rel="preload" href="/VuepressBlog/assets/js/35.73e0e708.js" as="script"><link rel="prefetch" href="/VuepressBlog/assets/js/10.0f6074f5.js"><link rel="prefetch" href="/VuepressBlog/assets/js/11.747fcaf5.js"><link rel="prefetch" href="/VuepressBlog/assets/js/12.519ee08e.js"><link rel="prefetch" href="/VuepressBlog/assets/js/13.cf486763.js"><link rel="prefetch" href="/VuepressBlog/assets/js/14.633d8b69.js"><link rel="prefetch" href="/VuepressBlog/assets/js/15.0b2f49ec.js"><link rel="prefetch" href="/VuepressBlog/assets/js/16.fee59a07.js"><link rel="prefetch" href="/VuepressBlog/assets/js/17.2eba3d15.js"><link rel="prefetch" href="/VuepressBlog/assets/js/18.e1541ccc.js"><link rel="prefetch" href="/VuepressBlog/assets/js/19.4f3145ab.js"><link rel="prefetch" href="/VuepressBlog/assets/js/20.4b4a7f9d.js"><link rel="prefetch" href="/VuepressBlog/assets/js/21.8ee70ab5.js"><link rel="prefetch" href="/VuepressBlog/assets/js/22.94294803.js"><link rel="prefetch" href="/VuepressBlog/assets/js/23.e6adf6f4.js"><link rel="prefetch" href="/VuepressBlog/assets/js/24.0b37918a.js"><link rel="prefetch" href="/VuepressBlog/assets/js/25.e7bcddb8.js"><link rel="prefetch" href="/VuepressBlog/assets/js/26.ba22da63.js"><link rel="prefetch" href="/VuepressBlog/assets/js/27.ce670089.js"><link rel="prefetch" href="/VuepressBlog/assets/js/28.0ce16348.js"><link rel="prefetch" href="/VuepressBlog/assets/js/29.fff60880.js"><link rel="prefetch" href="/VuepressBlog/assets/js/3.ce2fe7f0.js"><link rel="prefetch" href="/VuepressBlog/assets/js/30.94331cec.js"><link rel="prefetch" href="/VuepressBlog/assets/js/31.b9c56feb.js"><link rel="prefetch" href="/VuepressBlog/assets/js/32.50de7540.js"><link rel="prefetch" href="/VuepressBlog/assets/js/33.f389ef1e.js"><link rel="prefetch" href="/VuepressBlog/assets/js/34.c07a71a1.js"><link rel="prefetch" href="/VuepressBlog/assets/js/36.4d5cec87.js"><link rel="prefetch" href="/VuepressBlog/assets/js/37.8062692d.js"><link rel="prefetch" href="/VuepressBlog/assets/js/38.c0c3b579.js"><link rel="prefetch" href="/VuepressBlog/assets/js/39.a9be6e67.js"><link rel="prefetch" href="/VuepressBlog/assets/js/4.62ac00ff.js"><link rel="prefetch" href="/VuepressBlog/assets/js/40.0c541420.js"><link rel="prefetch" href="/VuepressBlog/assets/js/41.265730b2.js"><link rel="prefetch" href="/VuepressBlog/assets/js/42.a08059b3.js"><link rel="prefetch" href="/VuepressBlog/assets/js/43.77b99228.js"><link rel="prefetch" href="/VuepressBlog/assets/js/44.57a1ccd9.js"><link rel="prefetch" href="/VuepressBlog/assets/js/45.1ddd9b90.js"><link rel="prefetch" href="/VuepressBlog/assets/js/5.762befa8.js"><link rel="prefetch" href="/VuepressBlog/assets/js/6.29c993ed.js"><link rel="prefetch" href="/VuepressBlog/assets/js/7.415e8f42.js"><link rel="prefetch" href="/VuepressBlog/assets/js/vendors~docsearch.c0b6abca.js">
+    <link rel="stylesheet" href="/VuepressBlog/assets/css/0.styles.36acf85b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/VuepressBlog/" class="home-link router-link-active"><!----> <span class="site-name">Ethan_Zhang</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/VuepressBlog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术栈" class="dropdown-title"><span class="title">技术栈</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术栈" class="mobile-dropdown-title"><span class="title">技术栈</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/VuepressBlog/note/framework/vue/" class="nav-link router-link-active">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/VuepressBlog/note/framework/react/" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/VuepressBlog/note/framework/nodejs/" class="nav-link">
+  Node.js
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="语言" class="dropdown-title"><span class="title">语言</span> <span class="arrow down"></span></button> <button type="button" aria-label="语言" class="mobile-dropdown-title"><span class="title">语言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/VuepressBlog/note/lang/js/" class="nav-link">
+  Js
+</a></li><li class="dropdown-item"><!----> <a href="/VuepressBlog/note/lang/ts/" class="nav-link">
+  Ts
+</a></li><li class="dropdown-item"><!----> <a href="/VuepressBlog/note/lang/css/" class="nav-link">
+  Css
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="项目" class="dropdown-title"><span class="title">项目</span> <span class="arrow down"></span></button> <button type="button" aria-label="项目" class="mobile-dropdown-title"><span class="title">项目</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/VuepressBlog/note/project/low-code/" class="nav-link">
+  低代码编辑器
+</a></li></ul></div></div><div class="nav-item"><a href="/VuepressBlog/note/plugin/" class="nav-link">
+  插件
+</a></div><div class="nav-item"><a href="/VuepressBlog/note/other/" class="nav-link">
+  其他
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="博客" class="dropdown-title"><span class="title">博客</span> <span class="arrow down"></span></button> <button type="button" aria-label="博客" class="mobile-dropdown-title"><span class="title">博客</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/PoliZyh" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://blog.csdn.net/qq_62875177" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  CSDN
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/VuepressBlog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术栈" class="dropdown-title"><span class="title">技术栈</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术栈" class="mobile-dropdown-title"><span class="title">技术栈</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/VuepressBlog/note/framework/vue/" class="nav-link router-link-active">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/VuepressBlog/note/framework/react/" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/VuepressBlog/note/framework/nodejs/" class="nav-link">
+  Node.js
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="语言" class="dropdown-title"><span class="title">语言</span> <span class="arrow down"></span></button> <button type="button" aria-label="语言" class="mobile-dropdown-title"><span class="title">语言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/VuepressBlog/note/lang/js/" class="nav-link">
+  Js
+</a></li><li class="dropdown-item"><!----> <a href="/VuepressBlog/note/lang/ts/" class="nav-link">
+  Ts
+</a></li><li class="dropdown-item"><!----> <a href="/VuepressBlog/note/lang/css/" class="nav-link">
+  Css
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="项目" class="dropdown-title"><span class="title">项目</span> <span class="arrow down"></span></button> <button type="button" aria-label="项目" class="mobile-dropdown-title"><span class="title">项目</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/VuepressBlog/note/project/low-code/" class="nav-link">
+  低代码编辑器
+</a></li></ul></div></div><div class="nav-item"><a href="/VuepressBlog/note/plugin/" class="nav-link">
+  插件
+</a></div><div class="nav-item"><a href="/VuepressBlog/note/other/" class="nav-link">
+  其他
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="博客" class="dropdown-title"><span class="title">博客</span> <span class="arrow down"></span></button> <button type="button" aria-label="博客" class="mobile-dropdown-title"><span class="title">博客</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/PoliZyh" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://blog.csdn.net/qq_62875177" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  CSDN
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>关于</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/VuepressBlog/note/framework/vue/" aria-current="page" class="sidebar-link">介绍</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>业务</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/VuepressBlog/note/framework/vue/menu.html" class="sidebar-link">递归Menu组件</a></li><li><a href="/VuepressBlog/note/framework/vue/axios.html" class="sidebar-link">Axios</a></li><li><a href="/VuepressBlog/note/framework/vue/token.html" class="sidebar-link">无感刷新Token</a></li><li><a href="/VuepressBlog/note/framework/vue/svg.html" class="sidebar-link">封装Svg组件</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>知识点</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/VuepressBlog/note/framework/vue/router.html" aria-current="page" class="active sidebar-link">路由进阶</a></li><li><a href="/VuepressBlog/note/framework/vue/asyncComponent.html" class="sidebar-link">异步组件</a></li><li><a href="/VuepressBlog/note/framework/vue/tv-show.html" class="sidebar-link">在template中v-show</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>API</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/VuepressBlog/note/framework/vue/defineExpose.html" class="sidebar-link">defineExpose</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="路由进阶"><a href="#路由进阶" class="header-anchor">#</a> 路由进阶</h1> <h2 id="routerlink"><a href="#routerlink" class="header-anchor">#</a> RouterLink</h2> <p>简单介绍一下RouterLink的属性</p> <ul><li>to：用于指定跳转路径</li> <li>tag：用于指定RouterLink被渲染为什么标签，比如下面的代码将会被渲染为li而不是a标签</li></ul> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>RouterLink</span> <span class="token attr-name">tag</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>li<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>RouterLink</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><ul><li>replace：不会留下history记录，所以指定replace的情况下，后退键返回不能返回到上个页面中</li> <li>active-calss：当RouterLink对应的路由匹配成功时，会自动给当前元素设置一个router-link-active的class，设置active-calss可以修改默认的名称。</li></ul> <h3 id="query属性"><a href="#query属性" class="header-anchor">#</a> query属性</h3> <ol><li>切换路由并传递参数用法</li></ol> <p>方法一：to的字符串写法</p> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>router-link</span> <span class="token attr-name">:to</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>`/home/message/detail?id=${m.id}&amp;name=${m.name}`<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>{{m.name}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>router-link</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>方法二：to的对象写法</p> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>router-link</span>
+  <span class="token attr-name">:to</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>{
+    path:'/home/message/detail',
+    query:{
+      id:666,
+      name:<span class="token punctuation">&quot;</span></span><span class="token attr-name">张三&quot;</span>
+    <span class="token attr-name">}</span>
+  <span class="token attr-name">}&quot;</span>
+  <span class="token punctuation">&gt;</span></span>跳转<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>router-link</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><ol start="2"><li>接收参数</li></ol> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">setup</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">import</span> <span class="token punctuation">{</span> useRoute <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue-router'</span>
+<span class="token keyword">const</span> route <span class="token operator">=</span> <span class="token function">useRoute</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>route<span class="token punctuation">.</span>query<span class="token punctuation">.</span>id<span class="token punctuation">)</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h3 id="params属性"><a href="#params属性" class="header-anchor">#</a> params属性</h3> <ol><li>跳转路由并携带params参数</li></ol> <p>方法一：to的字符串写法</p> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>router-link</span> <span class="token attr-name">:to</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>`/home/message/detail/${m.id}/${m.name}`<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>{{m.name}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>router-link</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>方法二：to的对象写法</p> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">v-for</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>m in list<span class="token punctuation">&quot;</span></span> <span class="token attr-name">:key</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>m.id<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>router-link</span>
+    <span class="token attr-name">:to</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>{
+      name:'messageDetail',
+      params:{
+        id:m.id,
+        name:m.name
+      }
+    }<span class="token punctuation">&quot;</span></span>
+    <span class="token punctuation">&gt;</span></span>
+  跳转
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>router-link</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>特别注意：路由携带params参数时，若使用to的对象写法，则不能使用path配置项，必须使用name配置</p> <ol start="2"><li>接收参数</li></ol> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">setup</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">import</span> <span class="token punctuation">{</span> useRoute <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue-router'</span>
+<span class="token keyword">const</span> route <span class="token operator">=</span> <span class="token function">useRoute</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>route<span class="token punctuation">.</span>params<span class="token punctuation">.</span>id<span class="token punctuation">)</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h3 id="props配置"><a href="#props配置" class="header-anchor">#</a> props配置</h3> <p>作用：让路由组件更方便的收到参数</p> <p>方法一：值为对象，该对象中的所有key-value都会以props的形式传给Detail组件</p> <p>方法二：值为布尔值，把路由收到的所有params参数通过props传给Detail组件</p> <p>方法三：值为函数，该函数返回的对象中每一组key-value都会通过props传给Detail组件</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">{</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span><span class="token string">&quot;detail&quot;</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">path</span><span class="token operator">:</span><span class="token string">&quot;detail/:id&quot;</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">component</span><span class="token operator">:</span>Detail<span class="token punctuation">,</span>
+  <span class="token comment">// 方法一：props的值为对象</span>
+  <span class="token literal-property property">props</span><span class="token operator">:</span><span class="token punctuation">{</span> <span class="token literal-property property">id</span><span class="token operator">:</span><span class="token number">21</span><span class="token punctuation">,</span> <span class="token literal-property property">name</span><span class="token operator">:</span><span class="token string">&quot;小七&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token comment">// 方法二：值为布尔值</span>
+  <span class="token literal-property property">props</span><span class="token operator">:</span><span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token comment">// 方法三：值为函数</span>
+  <span class="token function">props</span><span class="token punctuation">(</span><span class="token parameter">route</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">id</span><span class="token operator">:</span>route<span class="token punctuation">.</span>query<span class="token punctuation">.</span>id<span class="token punctuation">,</span>
+      <span class="token literal-property property">name</span><span class="token operator">:</span>route<span class="token punctuation">.</span>query<span class="token punctuation">.</span>name
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>  
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="编程式路由导航"><a href="#编程式路由导航" class="header-anchor">#</a> 编程式路由导航</h3> <p>作用：不借助RouterLink实现路由跳转，让路由跳转更加灵活</p> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">setup</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">import</span> <span class="token punctuation">{</span> useRouter <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue-router'</span>
+
+router<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span><span class="token string">&quot;detail&quot;</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">params</span><span class="token operator">:</span><span class="token punctuation">{</span>
+    <span class="token literal-property property">id</span><span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">name</span><span class="token operator">:</span><span class="token string">&quot;小七&quot;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+router<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span><span class="token string">&quot;detail&quot;</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">params</span><span class="token operator">:</span><span class="token punctuation">{</span>
+    <span class="token literal-property property">id</span><span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">name</span><span class="token operator">:</span><span class="token string">&quot;小七&quot;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+router<span class="token punctuation">.</span><span class="token function">go</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span> <span class="token comment">// 这个方法的参数是一个整数，意思是在 history 记录中向前或者后退多少步，类似 window.history.go(n)</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/VuepressBlog/note/framework/vue/svg.html" class="prev">
+        封装Svg组件
+      </a></span> <span class="next"><a href="/VuepressBlog/note/framework/vue/asyncComponent.html">
+        异步组件
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/VuepressBlog/assets/js/app.7c089186.js" defer></script><script src="/VuepressBlog/assets/js/2.e8a88f4c.js" defer></script><script src="/VuepressBlog/assets/js/1.6bc621c5.js" defer></script><script src="/VuepressBlog/assets/js/35.73e0e708.js" defer></script>
+  </body>
+</html>
